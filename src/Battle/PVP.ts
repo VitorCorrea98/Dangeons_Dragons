@@ -11,10 +11,8 @@ class PVP extends Battle {
     let playerDead = 0; 
     do {
       this._player1.attack(this._player2);
-      this._player2.receiveDamage(this._player1.strength);
       if (this._player2.lifePoints <= 0) { playerDead = 1; }
       this._player2.attack(this._player1);
-      this._player1.receiveDamage(this._player2.strength);
       if (this._player1.lifePoints <= 0) { playerDead = -1; }
     } while (playerDead === 0);
 
